@@ -1,4 +1,4 @@
-# RAG Pipeline with ChromaDB
+# ChromaDB Pipeline
 
 A Python-based Retrieval-Augmented Generation (RAG) pipeline for chunking, storing, and querying unstructured text documents using ChromaDB.
 
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 ### 1. Prepare Your Documents
 
-Create a folder with your text documents (.txt, .md files):
+Create a folder with your text documents (.txt or .md):
 
 ```
 documents/
@@ -72,6 +72,98 @@ Options:
 - `--query`: Query string (if not provided, enters interactive mode)
 - `--collection`: Collection to query (default: documents)
 - `--n-results`: Number of results to return (default: 5)
+
+
+**Example Query Output**:
+
+```
+------------------------------------------------------------
+
+Enter query: EU
+
+============================================================
+SEARCH RESULTS
+============================================================
+
+--- Result 1 ---
+Source: HOUSE_OVERSIGHT_025215.txt
+Chunk ID: 7
+Distance: 0.4393
+
+Content:
+Europe: Finally (!!), but now what?
+
+--- Result 2 ---
+Source: HOUSE_OVERSIGHT_031159.txt
+Chunk ID: 7
+Distance: 0.4393
+
+Content:
+Europe: Finally (!!), but now what?
+
+--- Result 3 ---
+Source: HOUSE_OVERSIGHT_030808.txt
+Chunk ID: 24
+Distance: 0.5147
+
+Content:
+Ireland or Spain. Its Italy holdings are less than 2% of the fund, and the portfolio manager does not expect to roll them when they mature.
+7 A 2010 Eurobarometer Poll showed very low readings on whether “Membership in the EU is a good thing”. More recently, the centre-left
+Foundation for European P...
+
+--- Result 4 ---
+Source: HOUSE_OVERSIGHT_011170.txt
+Chunk ID: 89
+Distance: 0.5162
+
+Content:
+should leave the EU https://t.co/EPNk488c9h
+https://t.co/3mqaV8v5KD
+RT @missingfaktor: Brexit. Grexit. Departugal.
+Italeave. Fruckoff. Czechout. Oustria. Finish.
+Slovakout. Latervia. Byegium.
+Â¿El fin del sueÃ±o europeo? 'Brexit' o 'Bremain', los
+britÃ¡nicos deciden suÂ futuro:
+Mientras todo el... h...
+
+--- Result 5 ---
+Source: HOUSE_OVERSIGHT_011170.txt
+Chunk ID: 23
+Distance: 0.5180
+
+Content:
+23 Jun 2016,
+02:37 - CEST
+23 Jun 2016,
+02:54 - CEST
+23 Jun 2016,
+02:54 - CEST
+23 Jun 2016,
+02:54 - CEST
+23 Jun 2016,
+02:54 - CEST
+23 Jun 2016,
+02:54 - CEST
+23 Jun 2016,
+02:54 - CEST
+23 Jun 2016,
+02:54 - CEST
+23 Jun 2016,
+02:54 - CEST
+23 Jun 2016,
+02:54 - CEST
+Nantong
+City,
+Jiangsu,
+China
+Orlando
+, F...
+
+------------------------------------------------------------
+```
+
+
+
 
 ## Programmatic Usage
 
